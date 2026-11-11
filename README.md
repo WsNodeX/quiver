@@ -2,9 +2,9 @@
 
 # Quiver
 
-### 求职季开箱即用的 12 个 Agent Skills
+### 求职季开箱即用的 13 个 Agent Skills
 
-*读完 JD 知道该补什么 · 模拟面试问到答不上 · 简历改到能过筛 · offer 到手会谈薪*
+*不知道从哪开始？先说一句「我该先干什么」，`quiver-router` 会告诉你现在该做的那一件事*
 
 [![Stars](https://img.shields.io/github/stars/WsNodeX/quiver?style=flat-square&color=111111&label=stars)](https://github.com/WsNodeX/quiver/stargazers)
 [![Release](https://img.shields.io/github/v/release/WsNodeX/quiver?style=flat-square&color=111111&label=release)](https://github.com/WsNodeX/quiver/releases)
@@ -28,7 +28,15 @@ python scripts/install.py jd-decoder     # 或只装一个
 
 装好后在客户端里说「帮我模拟面试」「这周周报写一下」，对应 skill 自动触发。
 
-## 12 个 skill
+## 13 个 skill
+
+**先用这一个判断你现在该做什么：**
+
+| Skill | 什么时候用 | 输出什么 |
+|---|---|---|
+| `quiver-router` | 不知道从哪开始 / 12 个太多不知道用哪个 | 定位你现在的阶段，只给**一件事**和对应的 skill，并说清做别的会浪费在哪 |
+
+**然后按阶段往下走：**
 
 | Skill | 什么时候用 | 输出什么 |
 |---|---|---|
@@ -72,7 +80,7 @@ graph LR
 
 ```
 quiver/
-├── skills/                  # 12 个 skill，每个一个目录
+├── skills/                  # 13 个 skill，每个一个目录
 │   └── <name>/SKILL.md      # frontmatter + 工作流 + 输出格式 + 判断原则
 ├── scripts/
 │   ├── validate.py          # 零依赖格式校验器（CI 同款）
@@ -84,7 +92,7 @@ quiver/
 ## 测试
 
 ```bash
-python scripts/validate.py                # 12/12 skill 格式合规
+python scripts/validate.py                # 13/13 skill 格式合规
 python -m unittest discover -s tests      # 安装与校验的分支测试
 ```
 
